@@ -1,0 +1,30 @@
+diff -ruN a/typo3/sysext/core/Classes/Resource/Collection/AbstractFileCollection.php b/typo3/sysext/core/Classes/Resource/Collection/AbstractFileCollection.php
+--- a/typo3/sysext/core/Classes/Resource/Collection/AbstractFileCollection.php	2015-10-28 00:00:00.000000000 +0100
++++ b/typo3/sysext/core/Classes/Resource/Collection/AbstractFileCollection.php	2015-10-28 00:00:00.000000000 +0100
+@@ -47,7 +47,7 @@
+ 	 * Field contents of $itemsCriteriaField. Defines which the items or search criteria for the items
+ 	 * depending on the type (see self::$type above) of this file collection.
+ 	 *
+-	 * @var mixed
++	 * @var bool|float|int|object|string
+ 	 */
+ 	protected $itemsCriteria;
+ 
+@@ -168,7 +168,7 @@
+ 	/**
+ 	 * Gets ths items criteria.
+ 	 *
+-	 * @return mixed
++	 * @return bool|float|int|object|string
+ 	 */
+ 	public function getItemsCriteria() {
+ 		return $this->itemsCriteria;
+@@ -177,7 +177,7 @@
+ 	/**
+ 	 * Sets the items criteria.
+ 	 *
+-	 * @param mixed
++	 * @param bool|float|int|object|string
+ 	 */
+ 	public function setItemsCriteria($itemsCriteria) {
+ 		$this->itemsCriteria = $itemsCriteria;

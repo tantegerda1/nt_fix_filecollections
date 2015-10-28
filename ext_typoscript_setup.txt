@@ -1,0 +1,35 @@
+config.tx_extbase {
+	persistence {
+		classes {
+			TYPO3\CMS\Extbase\Domain\Model\AbstractFileCollection {
+				mapping {
+					tableName = sys_file_collection
+					recordType = type
+				}
+				subclasses {
+					TYPO3\CMS\Extbase\Domain\Model\StaticFileCollection = TYPO3\CMS\Extbase\Domain\Model\StaticFileCollection
+					TYPO3\CMS\Extbase\Domain\Model\FolderBasedFileCollection = TYPO3\CMS\Extbase\Domain\Model\FolderBasedFileCollection
+					Netztechniker\NtFixFilecollections\Domain\Model\CategoryBasedFileCollection = Netztechniker\NtFixFilecollections\Domain\Model\CategoryBasedFileCollection
+				}
+			}
+			TYPO3\CMS\Extbase\Domain\Model\StaticFileCollection {
+				mapping {
+					tableName = sys_file_collection
+					recordType = static
+				}
+			}
+			TYPO3\CMS\Extbase\Domain\Model\FolderBasedFileCollection {
+				mapping {
+					tableName = sys_file_collection
+					recordType = folder
+				}
+			}
+			Netztechniker\NtFixFilecollections\Domain\Model\CategoryBasedFileCollection {
+				mapping {
+					tableName = sys_file_collection
+					recordType = category
+				}
+			}
+		}
+	}
+}

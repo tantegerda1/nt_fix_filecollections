@@ -1,0 +1,36 @@
+{
+    "name": "netztechniker/nt-fix-filecollections",
+    "description": "Allow actually using FileCollections in your models",
+    "keywords": ["fix", "filecollection"],
+    "homepage": "https://github.com/tantegerda1/nt_fix_filecollections",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Ludwig Rafelsberger",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "netresearch/composer-patches-plugin": "~1.0",
+        "php": ">= 5.5.0, <= 5.6.99",
+        "typo3/cms": ">= 6.2.15"
+    },
+    "type": "typo3-cms-extension",
+    "extra": {
+        "patches": {
+            "typo3/cms": {
+                "6.2.15": [
+                    {
+                        "url": "http://raw.githubusercontent.com/tantegerda1/nt_fix_filecollections/master/patches/typo3-cms-6.2.15.patch"
+                    }
+                ]
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": { "Netztechniker\\NtFixFilecollections\\": "Classes/" }
+    },
+    "support": {
+        "issues": "https://github.com/tantegerda1/nt_fix_filecollections/issues"
+    }
+}
